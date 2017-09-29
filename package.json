@@ -1,0 +1,24 @@
+{
+  "name": "dogmatch",
+  "version": "1.0.0",
+  "description": "A 10 question quiz to determine which type of dog best suits your lifestyle",
+  "main": "home.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jdiehl99/HW7-1.git"
+  },
+  "keywords": [
+    "dog",
+    "match",
+    "quiz"
+  ],
+  "author": "Jodi Diehl",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jdiehl99/HW7-1/issues"
+  },
+  "homepage": "https://github.com/jdiehl99/HW7-1#readme"
+}
