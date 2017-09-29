@@ -20,5 +20,10 @@
   "bugs": {
     "url": "https://github.com/jdiehl99/HW7-1/issues"
   },
-  "homepage": "https://github.com/jdiehl99/HW7-1#readme"
+  "homepage": "https://github.com/jdiehl99/HW7-1#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.0",
+    "path": "^0.12.7"
+  }
 }
