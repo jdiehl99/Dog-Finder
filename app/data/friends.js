@@ -1,6 +1,7 @@
-var friends = [
+const friends = [
     {
         "name": "Pug",
+        "photo":"pug.jpg",
         "q1": 1,
         "q2": 2,
         "q3": 5,
@@ -14,6 +15,7 @@ var friends = [
     },
     {
         "name": "Chihuahua",
+        "photo":"chihuahua.jpg",
         "q1": 3,
         "q2": 5,
         "q3": 1,
@@ -27,6 +29,7 @@ var friends = [
     },
     {
         "name": "German Sheperd",
+        "photo":"germansheperd.jpg",
         "q1": 5,
         "q2": 5,
         "q3": 2,
@@ -40,6 +43,7 @@ var friends = [
     },
     {
         "name": "Poodle",
+        "photo":"poodle.jpg",
         "q1": 5,
         "q2": 4,
         "q3": 5,
@@ -53,6 +57,7 @@ var friends = [
     },
     {
         "name": "Pomeranian",
+        "photo":"pomeranian.jpg",
         "q1": 4,
         "q2": 2,
         "q3": 5,
@@ -66,6 +71,7 @@ var friends = [
     },
     {
         "name": "Labrador",
+        "photo":"labrador.jpg",
         "q1": 5,
         "q2": 3,
         "q3": 5,
@@ -79,6 +85,7 @@ var friends = [
     },
     {
         "name": "Cocker Spaniel",
+        "photo":"cockerspaniel.jpg",
         "q1": 2,
         "q2": 1,
         "q3": 5,
@@ -92,6 +99,7 @@ var friends = [
     },
     {
         "name": "Corgi",
+        "photo":"corgi.jpg",
         "q1": 3,
         "q2": 5,
         "q3": 5,
@@ -105,6 +113,7 @@ var friends = [
     },
     {
         "name": "Dachshund",
+        "photo":"dauchshund.jpg",
         "q1": 2,
         "q2": 5,
         "q3": 4,
@@ -118,6 +127,7 @@ var friends = [
     },
     {
         "name": "Great Dane",
+        "photo":"greatdane.jpg",
         "q1": 5,
         "q2": 3,
         "q3": 5,
