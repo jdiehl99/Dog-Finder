@@ -1,143 +1,163 @@
 const friends = [
     {
         "name": "Pug",
-        "photo":"pug.jpg",
-        "q1": 1,
-        "q2": 2,
-        "q3": 5,
-        "q4": 1,
-        "q5": 1,
-        "q6": 4,
-        "q7": 5,
-        "q8": 5,
-        "q9": 1,
-        "q10": 3
+        "photo": "pug.jpg",
+        "scores": [
+            1,
+            2,
+            5,
+            1,
+            1,
+            4,
+            5,
+            5,
+            1,
+            3
+        ]
     },
     {
         "name": "Chihuahua",
-        "photo":"chihuahua.jpg",
-        "q1": 3,
-        "q2": 5,
-        "q3": 1,
-        "q4": 5,
-        "q5": 1,
-        "q6": 1,
-        "q7": 3,
-        "q8": 2,
-        "q9": 3,
-        "q10": 5
+        "photo": "chihuahua.jpg",
+        "scores": [
+            3,
+            5,
+            1,
+            5,
+            1,
+            1,
+            3,
+            2,
+            3,
+            5
+        ]
     },
     {
         "name": "German Sheperd",
-        "photo":"germansheperd.jpg",
-        "q1": 5,
-        "q2": 5,
-        "q3": 2,
-        "q4": 1,
-        "q5": 4,
-        "q6": 4,
-        "q7": 4,
-        "q8": 3,
-        "q9": 5,
-        "q10": 2
+        "photo": "germansheperd.jpg",
+        "scores": [
+            5,
+            5,
+            2,
+            1,
+            4,
+            4,
+            4,
+            3,
+            5,
+            2
+        ]
     },
     {
         "name": "Poodle",
-        "photo":"poodle.jpg",
-        "q1": 5,
-        "q2": 4,
-        "q3": 5,
-        "q4": 2,
-        "q5": 5,
-        "q6": 5,
-        "q7": 3,
-        "q8": 3,
-        "q9": 4,
-        "q10": 4
+        "photo": "poodle.jpg",
+        "scores": [
+            5,
+            4,
+            5,
+            2,
+            5,
+            5,
+            3,
+            3,
+            4,
+            4
+        ]
     },
     {
         "name": "Pomeranian",
-        "photo":"pomeranian.jpg",
-        "q1": 4,
-        "q2": 2,
-        "q3": 5,
-        "q4": 5,
-        "q5": 2,
-        "q6": 4,
-        "q7": 3,
-        "q8": 4,
-        "q9": 2,
-        "q10": 5
+        "photo": "pomeranian.jpg",
+        "scores": [
+            4,
+            2,
+            5,
+            5,
+            2,
+            4,
+            3,
+            4,
+            2,
+            5
+        ]
     },
     {
         "name": "Labrador",
-        "photo":"labrador.jpg",
-        "q1": 5,
-        "q2": 3,
-        "q3": 5,
-        "q4": 3,
-        "q5": 5,
-        "q6": 5,
-        "q7": 3,
-        "q8": 5,
-        "q9": 4,
-        "q10": 3
+        "photo": "labrador.jpg",
+        "scores": [
+            5,
+            3,
+            5,
+            3,
+            5,
+            5,
+            3,
+            5,
+            4,
+            3
+        ]
     },
     {
         "name": "Cocker Spaniel",
-        "photo":"cockerspaniel.jpg",
-        "q1": 2,
-        "q2": 1,
-        "q3": 5,
-        "q4": 4,
-        "q5": 4,
-        "q6": 5,
-        "q7": 3,
-        "q8": 4,
-        "q9": 3,
-        "q10": 5
+        "photo": "cockerspaniel.jpg",
+        "scores": [
+            2,
+            1,
+            5,
+            4,
+            4,
+            5,
+            3,
+            4,
+            3,
+            5
+        ]
     },
     {
         "name": "Corgi",
-        "photo":"corgi.jpg",
-        "q1": 3,
-        "q2": 5,
-        "q3": 5,
-        "q4": 3,
-        "q5": 1,
-        "q6": 2,
-        "q7": 5,
-        "q8": 4,
-        "q9": 4,
-        "q10": 3
+        "photo": "corgi.jpg",
+        "scores": [
+            3,
+            5,
+            5,
+            3,
+            1,
+            2,
+            5,
+            4,
+            4,
+            3
+        ]
     },
     {
         "name": "Dachshund",
-        "photo":"dauchshund.jpg",
-        "q1": 2,
-        "q2": 5,
-        "q3": 4,
-        "q4": 5,
-        "q5": 1,
-        "q6": 2,
-        "q7": 5,
-        "q8": 2,
-        "q9": 2,
-        "q10": 5
+        "photo": "dauchshund.jpg",
+        "scores": [
+            2,
+            5,
+            4,
+            5,
+            1,
+            2,
+            5,
+            2,
+            2,
+            5
+        ]
     },
     {
         "name": "Great Dane",
-        "photo":"greatdane.jpg",
-        "q1": 5,
-        "q2": 3,
-        "q3": 5,
-        "q4": 1,
-        "q5": 3,
-        "q6": 5,
-        "q7": 4,
-        "q8": 4,
-        "q9": 5,
-        "q10": 1
+        "photo": "greatdane.jpg",
+        "scores": [
+            5,
+            3,
+            5,
+            1,
+            3,
+            5,
+            4,
+            4,
+            5,
+            1
+        ]
     }
 ]
 module.exports = friends;

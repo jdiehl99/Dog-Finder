@@ -5,35 +5,43 @@ var app = express();
 
 var friends = require("./../data/friends.js");
 
-// A GET route with the url /api/friends. This will be used to display a JSON of all possible friends.
-// A POST routes /api/friends. This will be used to handle incoming survey results. This route will also be used to handle the compatibility logic.
-
-// Show all matches in the arrary
-function showArray(app, __dirname) {
-    console.log("showArray function");
+function apiStuff(app, __dirname) {
+    // Show all matches in the arrary
     app.get("/api/friends", function (req, res) {
         res.json(friends);
     });
-}
 
-
-
-//  do logic after user submits form to determine best match
-function doResults(app, __dirname) {
-    console.log("doResults function");
+    //  do logic after user submits form to determine best match
     app.post("/api/new", function (req, res) {
-        // calculate results for each possible match, then push difference to array
-        // sort score array, then display the one with smallest value
+        var userAnswers = [];
+        var differenceArr = [];
+        var diff = 0;
 
-        // var newtable = req.body;
-        // newtable.routeName = newtable.name.replace(/\s+/g, "").toLowerCase();
+        // take user inputs and shove them into an array
+        var formData = req.body;
+        userAnswers.push(formData);
+        
+        // res.json(formData);
+        console.log("useranswers",userAnswers);
+        // console.log("user score length",userAnswers.scores);
+        console.log("friends score length",friends.scores.length);
 
-        // console.log(newtable);
+        // // run through the friends array
+        // for (i = 0; i < friends.length; i++) {
 
-        // tables.push(newtable);
+        //     for (s = 0; s < friends[i].scores.length; s++) {
+        //         diffval = Math.abs(userAnswers.scores.scores[s] - friends[i].scores[s]);
+        //         differenceArr.push(diffval);
+        //     }
 
-        // res.json(newtable);
+        //     console.log("dff arr",differenceArr);
+
+        //     // for (d = 0; d < differenceArr.length; d++) {
+        //     //     diff += differenceArr[d];
+        //     // }
+        //     // console.log("diff",diff);
+        // }
     });
 }
 
-module.exports = showArray;
+module.exports = apiStuff;

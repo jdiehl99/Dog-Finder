@@ -1,24 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="assets/css/reset.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">    
-    <!-- <link rel="icon" href="dogmeat.png"> -->
-    <link href="assets/css/style.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
+        crossorigin="anonymous">
     <title>Dog Compatibility Quiz</title>
 </head>
+
 <body>
     <div class="container">
-        <h1>Dog Compatibility Quiz</h1>
+        <form role="form">
+            <h1>Dog Compatibility Quiz</h1>
+            <p>Answer the questions below on a scale of 1-5 with 1 being do not agree and 5 being definitely agree.</p>
+            <h3>Name:</h3>
+            <input id="name" name="name" type="text" placeholder="enter your name">
+            <h3>Link to your picture</h3>
+            <input id="photo" name="photo" type="text" placeholder="link to your photo">
+            <h3>I enjoy long walks</h3>
+            <select id="q1">
+                <option value="" selected>Select your answer</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="3">4</option>
+                <option value="3">5</option>
+              </select>
+
+            <h3>I want to be alerted when someone is near my house</h3>
+            <select id="q2">
+                <option value="" selected>Select your answer</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="3">4</option>
+                <option value="3">5</option>
+              </select>
+
+            <h3>I like to cuddle with my pet</h3>
+            <select id="q3">
+                <option value="" selected>Select your answer</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="3">4</option>
+                <option value="3">5</option>
+              </select>
+
+            <h3>I want to take my dog with me everywhere I go</h3>
+            <select id="q4">
+                <option value="" selected>Select your answer</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="3">4</option>
+                <option value="3">5</option>
+              </select>
+
+            <h3>I want to go swimming with my dog</h3>
+            <select id="q5">
+                <option value="" selected>Select your answer</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="3">4</option>
+                <option value="3">5</option>
+              </select>
 
 
+            <h3>It's ok for strangers to pet my dog</h3>
+            <select id="q6">
+                <option value="" selected>Select your answer</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="3">4</option>
+                <option value="3">5</option>
+              </select>
+
+            <h3>I use my dog as a conversation starter</h3>
+            <select id="q7">
+                      <option value="" selected>Select your answer</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="3">4</option>
+                      <option value="3">5</option>
+                    </select>
+
+            <h3>I have a good sense of humor</h3>
+            <select id="q8">
+                <option value="" selected>Select your answer</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="3">4</option>
+                <option value="3">5</option>
+              </select>
+
+            <h3>I have a large yard or place for a dog to run</h3>
+            <select id="q9">
+                <option value="" selected>Select your answer</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="3">4</option>
+                <option value="3">5</option>
+              </select>
+
+            <h3>I live in an apartment or city</h3>
+            <select id="q10">
+                <option value="" selected>Select your answer</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="3">4</option>
+                <option value="3">5</option>
+              </select>
+
+            <div class="text-right">
+                <button type="submit" class="btn btn-primary btn-md" id="dobtn">Find my dog!</button>
+            </div>
+        </form>
     </div>
+    <script type="text/javascript">
+ 
+        $("#dobtn").on("click", function (event) {
+            console.log("do button was pushed");
+            event.preventDefault();
+            var scorvals = [];
+            scorvals.push($("#q1").val());
+            scorvals.push($("#q2").val());
+            scorvals.push($("#q3").val());
+            scorvals.push($("#q4").val());
+            scorvals.push($("#q5").val());
+            scorvals.push($("#q6").val());
+            scorvals.push($("#q7").val());
+            scorvals.push($("#q8").val());
+            scorvals.push($("#q9").val());
+            scorvals.push($("#q10").val());
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+            var chkResults = {
+                name: $('#name').val().trim(),
+                image: $('#photo').val().trim(),
+                scores: scorvals
+            };
+
+            // add $.param so it will put answers in array
+            // sendItThru = $.param(chkResults, true);
+
+            // send results and receive and determine best match
+            $.post("/api/new", chkResults)
+                .done(function (data) {
+                    console.log(data);
+                });
+        });
+    </script>
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
