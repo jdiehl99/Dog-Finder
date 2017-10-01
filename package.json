@@ -2,6 +2,10 @@
   "name": "dogmatch",
   "version": "1.0.0",
   "description": "A 10 question quiz to determine which type of dog best suits your lifestyle",
+  "engines": {
+    "node": "6.11.0",
+    "npm": "3.10.10"
+  },
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
