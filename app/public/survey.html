@@ -170,8 +170,9 @@
             $.post("/api/new", chkResults)
                 .done(function (data) {
                     console.log(data);
-                    $("#mainData").html('<h3>Your best match is a: <span class="red">' + data[0] + '</span></h3>');
-                    $("#mainData").append('<img src="' + data[1] + '" width="400">');
+                    $("#mainData").html('<h3>'+data[3]+', your best match is a: <span class="red">' + data[0] + '</span></h3>');
+                    $("#mainData").append('<img src="' + data[4] + '" width="300"> is best matched with ');
+                    $("#mainData").append('<img src="' + data[1] + '" width="300">');
                 });
         });
     </script>

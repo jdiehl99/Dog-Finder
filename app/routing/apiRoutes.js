@@ -58,6 +58,8 @@ function apiStuff(app, __dirname) {
         console.log("best match", bestMatch);
         yourDog.push(bestMatch);
         yourDog.push(bestImg);
+        yourDog.push(req.body.name);
+        yourDog.push(req.body.photo);
         res.json(yourDog);
         console.log("your dog array",yourDog);
     });
