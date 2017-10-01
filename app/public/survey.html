@@ -28,7 +28,7 @@
         .red {
             color: red;
         }
-        input[text] {
+        input[type=text] {
             width: 100px;
         }
         /* The Modal (background) */
@@ -222,10 +222,10 @@
             $.post("/api/new", chkResults)
                 .done(function (data) {
                     $("#mainData").hide();
-                    $("#dataReults").html(function() {
+                    $("#myModal").html(function() {
                         modal.style.display = "block"
                     });
-                    $("#myModal").html('<h3>'+data[3]+', your best match is a: <span class="red">' + data[0] + '</span></h3>');
+                    $("#dataResults").html('<h3>'+data[3]+', your best match is a: <span class="red">' + data[0] + '</span></h3>');
                     $("#dataResults").empty();
                     $("#dataResults").append('<img src="' + data[4] + '" width="300"> is best matched with ');
                     $("#dataResults").append('<img src="' + data[1] + '" width="300">');
