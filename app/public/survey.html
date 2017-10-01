@@ -10,7 +10,7 @@
         crossorigin="anonymous">
     <style>
         #mainData {
-            background-image: url("http://www.creativehdwallpapers.com/uploads/large/dog/husky-dogs-images-wallpaper.jpg");
+            background-image: url("https://www.creativehdwallpapers.com/uploads/large/dog/husky-dogs-images-wallpaper.jpg");
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-position: right center;
@@ -45,9 +45,9 @@
             /* Sit on top */
             left: 0;
             top: 0;
-            width: 100%;
+            width: 60%;
             /* Full width */
-            height: 100%;
+            height: 60%;
             /* Full height */
             overflow: auto;
             /* Enable scroll if needed */
@@ -196,7 +196,7 @@
                 <option value="5">5 (strongly agree)</option>
               </select>
 
-                <div>
+                <div class="text-center">
                     <button type="submit" class="btn btn-primary btn-md" id="dobtn">Find my dog!</button>
                 </div>
             </form>
@@ -236,24 +236,25 @@
             $.post("/api/new", chkResults)
                 .done(function (data) {
                     $("#mainData").hide();
-                    $("#dataResults").html('<h3>' + data[3] + ', your best match is a: <span class="red">' + data[0] + '</span></h3>');
-                    $("#dataResults").empty();
-                    $("#dataResults").append('<img src="' + data[4] + '" width="300"> is best matched with ');
-                    $("#dataResults").append('<img src="' + data[1] + '" width="300">');
+                    $("#myModal").show();
+                    $("#dataResults").html('<h3>' + data[2] + ', your best match is a: </h3>');
+                    $("#dataResults").append('<span class="red">' + data[0] + '</span><img src="' + data[1] + '" width="300">');
+                    // $("#dataResults").append('<img src="' + data[3] + '" width="300"> is best matched with ');
+                   
 
                     // Get the modal
                     var modal = document.getElementById('myModal');
 
-                    // Get the button that opens the modal
-                    var btn = document.getElementById("myBtn");
+                    // // Get the button that opens the modal
+                    // var btn = document.getElementById("myBtn");
 
                     // Get the <span> element that closes the modal
                     var span = document.getElementsByClassName("close")[0];
 
-                    // When the user clicks on the button, open the modal 
-                    btn.onclick = function () {
-                        modal.style.display = "block";
-                    }
+                    // // When the user clicks on the button, open the modal 
+                    // btn.onclick = function () {
+                    //     modal.style.display = "block";
+                    // }
 
                     // When the user clicks on <span> (x), close the modal
                     span.onclick = function () {
