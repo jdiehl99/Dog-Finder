@@ -23,10 +23,7 @@ function apiStuff(app, __dirname) {
         // take user inputs and shove them into an array
         var formData = req.body;
         userAnswers.push(formData);
-        console.log("user name formData",formData.name);
-        console.log("user photo formData",formData.photo);
-        console.log("user name userAnswers",userAnswers.name);
-        console.log("user photo userAnswers",userAnswers.photo);
+
         // // run through the friends array
         for (i = 0; i < friends.length; i++) {
             var differenceArr = [];
@@ -49,7 +46,7 @@ function apiStuff(app, __dirname) {
         yourDog.push(bestMatch);
         yourDog.push(bestImg);
         yourDog.push(formData.name);
-        yourDog.push(formData.photo);
+        yourDog.push(formData.image);
         res.json(yourDog);
     });
 }
