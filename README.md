@@ -6,4 +6,4 @@ Are you curious which dog is best suited to your lifestyle?  Take this quiz to s
 
 
 hosted at Heroku
-https://devcenter.heroku.com/categories/deployment 
+https://vast-anchorage-61018.herokuapp.com
