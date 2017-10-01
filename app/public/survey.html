@@ -15,9 +15,11 @@
             background-attachment: fixed;
             background-position: right center;
         }
+
         h1 {
             color: #527bff;
         }
+
         h3 {
             color: #616060;
             font-weight: bold;
@@ -28,46 +30,58 @@
         .red {
             color: red;
         }
+
         input[type=text] {
             width: 300px;
         }
         /* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
 
-/* Modal Content/Box */
-.modal-content {
-    background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-}
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Black w/ opacity */
+        }
+        /* Modal Content/Box */
 
-/* The Close Button */
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            /* 15% from the top and centered */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            /* Could be more or less, depending on screen size */
+        }
+        /* The Close Button */
 
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
     </style>
     <title>Dog Compatibility Quiz</title>
 </head>
@@ -77,7 +91,7 @@
         <div class="container">
             <form role="form">
                 <h1>Dog Compatibility Quiz</h1>
-                 <h3>Name:</h3>
+                <h3>Name:</h3>
                 <input id="name" name="name" type="text" placeholder="enter your name">
                 <h3>Link to your picture</h3>
                 <input id="photo" name="photo" type="text" placeholder="link to your photo">
@@ -189,14 +203,14 @@
         </div>
     </div>
     <div id="myModal" class="modal">
-            
-              <!-- Modal content -->
-              <div class="modal-content">
-                <span class="close">&times;</span>
-                <div id="dataResults"></div>
-              </div>
-            
-            </div>
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="dataResults"></div>
+        </div>
+
+    </div>
     <script type="text/javascript">
         $("#dobtn").on("click", function (event) {
             console.log("do button was pushed");
@@ -222,39 +236,38 @@
             $.post("/api/new", chkResults)
                 .done(function (data) {
                     $("#mainData").hide();
-                    $("#myModal").html(function() {
-                        modal.style.display = "block"
-                    });
-                    $("#dataResults").html('<h3>'+data[3]+', your best match is a: <span class="red">' + data[0] + '</span></h3>');
+                    $("#dataResults").html('<h3>' + data[3] + ', your best match is a: <span class="red">' + data[0] + '</span></h3>');
                     $("#dataResults").empty();
                     $("#dataResults").append('<img src="' + data[4] + '" width="300"> is best matched with ');
                     $("#dataResults").append('<img src="' + data[1] + '" width="300">');
 
-// // Get the modal
-// var modal = document.getElementById('myModal');
+                    // Get the modal
+                    var modal = document.getElementById('myModal');
 
-// // Get the button that opens the modal
-// var btn = document.getElementById("myBtn");
+                    // Get the button that opens the modal
+                    var btn = document.getElementById("myBtn");
 
-// // Get the <span> element that closes the modal
-// var span = document.getElementsByClassName("close")[0];
+                    // Get the <span> element that closes the modal
+                    var span = document.getElementsByClassName("close")[0];
 
-// // When the user clicks on the button, open the modal 
-// btn.onclick = function() {
-//     modal.style.display = "block";
-// }
+                    // When the user clicks on the button, open the modal 
+                    btn.onclick = function () {
+                        modal.style.display = "block";
+                    }
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-    modal.style.display = "none";
-}
+                    // When the user clicks on <span> (x), close the modal
+                    span.onclick = function () {
+                        modal.style.display = "none";
+                        // $("#mainData").show();
+                    }
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
+                    // When the user clicks anywhere outside of the modal, close it
+                    window.onclick = function (event) {
+                        if (event.target == modal) {
+                            modal.style.display = "none";
+                            // $("#mainData").show();
+                        }
+                    }
 
                 });
         });
